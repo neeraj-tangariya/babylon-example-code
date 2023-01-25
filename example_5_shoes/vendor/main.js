@@ -1,7 +1,13 @@
-/// <reference path="babylon.d.ts"
+/// <reference path="./babylon.d.ts" />
 
 const canvas = document.getElementById("canvas");
-// const nextBtn = document.getElementById("nextBtn");
+const nextBtn = document.querySelectorAll('.changeMesh');
+
+const imgList = {
+    'midnight_shoes': 'midnight_shoes.glb',
+    'beach_shoes': 'beach_shoes.glb',
+    'black_shoes': 'black_shoes.glb',
+}
 
 var startRenderLoop = function (engine, canvas) {
     engine.runRenderLoop(function () {
@@ -14,7 +20,12 @@ var startRenderLoop = function (engine, canvas) {
 var engine = null;
 var scene = null;
 var sceneToRender = null;
+
+
 var createDefaultEngine = function () { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true, disableWebGL2Support: false }); };
+
+var file_name = "midnight_shoes.glb";
+
 var createScene = function () {
 
     // Creates a basic Babylon Scene object (non-mesh)
@@ -35,7 +46,8 @@ var createScene = function () {
     // Use asset Manager to load the asset
     var assetsManager = new BABYLON.AssetsManager(scene);
     
-    var meshTask = assetsManager.addMeshTask("shoe task", "", "./assets/scenes/", "midnight_shoes.glb");
+    var meshTask = assetsManager.addMeshTask("shoe task", "", "./assets/scenes/", file_name);
+
     meshTask.onSuccess = function (task) {
         task.loadedMeshes[0].position = BABYLON.Vector3.Zero();
         // scene.debugLayer.show({ embedMode: true });
@@ -84,6 +96,9 @@ window.addEventListener("resize", function () {
 });
 
 // next Btn clicked
-// nextBtn.addEventListener('click', function (event) {
-//     console.log('heelo next', event)
-// })
+nextBtn.forEach((elem) => {
+    elem.addEventListener('click', function (e) {
+        file_name = imgList[e.target.title];
+        window.scene = createScene();
+    })
+});
