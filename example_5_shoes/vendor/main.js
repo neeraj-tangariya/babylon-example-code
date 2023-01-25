@@ -1,7 +1,7 @@
 /// <reference path="babylon.d.ts"
 
-const canvas = document.getElementById("renderCanvas");
-const nextBtn = document.getElementById("imageChange");
+const canvas = document.getElementById("canvas");
+// const nextBtn = document.getElementById("nextBtn");
 
 var startRenderLoop = function (engine, canvas) {
     engine.runRenderLoop(function () {
@@ -82,3 +82,8 @@ initFunction().then(() => {
 window.addEventListener("resize", function () {
     engine.resize();
 });
+
+// next Btn clicked
+// nextBtn.addEventListener('click', function (event) {
+//     console.log('heelo next', event)
+// })
