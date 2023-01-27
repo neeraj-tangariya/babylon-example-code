@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>UPLAY</title>
+
+    <!-- Babylon.js -->
+    <script src="https://code.jquery.com/pep/0.4.2/pep.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+    <script src="https://preview.babylonjs.com/ammo.js"></script>
+    <script src="https://preview.babylonjs.com/cannon.js"></script>
+    <script src="https://preview.babylonjs.com/Oimo.js"></script>
+    <script src="https://preview.babylonjs.com/libktx.js"></script>
+    <script src="https://preview.babylonjs.com/earcut.min.js"></script>
+    <script src="https://preview.babylonjs.com/babylon.js"></script>
+    <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+    <script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+    <script src="https://preview.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+    <script src="https://preview.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+    <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+    <script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+    <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
+    <script src="https://game-uat.nunoerin.com/socket.io/socket.io.js"></script>
+    <script src="socketconnection.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+  
+
+
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <section>
+        <div id="preloader">
+            <div id="ctn-preloader" class="ctn-preloader">
+                <div class="animation-preloader">
+                    <div class="spinner"></div>
+                    <div class="txt-loading">
+                        <span data-text-preloader="L" class="letters-loading">
+                            L
+                        </span>
+
+                        <span data-text-preloader="O" class="letters-loading">
+                            O
+                        </span>
+
+                        <span data-text-preloader="A" class="letters-loading">
+                            A
+                        </span>
+
+                        <span data-text-preloader="D" class="letters-loading">
+                            D
+                        </span>
+
+                        <span data-text-preloader="I" class="letters-loading">
+                            I
+                        </span>
+
+                        <span data-text-preloader="N" class="letters-loading">
+                            N
+                        </span>
+
+                        <span data-text-preloader="G" class="letters-loading">
+                            G
+                        </span>
+                    </div>
+                </div>
+                <div class="loader-section section-left"></div>
+                <div class="loader-section section-right"></div>
+            </div>
+        </div>
+    </section>
+    <canvas id="renderCanvas"></canvas>
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
