@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+	
+	<title>Mousewheel Inputs</title>
+	
+	<link rel='stylesheet' type='text/css' href='css/style.css' />
+	
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+    <script type="text/javascript" src="js/increment.js"></script>
+    
+</head>
+
+<body>
+
+    <div id="page-wrap">
+    
+        <h1>Mousewheel Inputs</h1>
+        <p>Position the mouse cursor within the input box and scroll the mousewheel to see how it works. Without JavaScript, 
+        you simply just don't see the little graphic and the input works as normal. The "With Plugin" version stops 
+        at zero instead of allowing negative numbers (just for demo purposes, either technique could do that).</p>
+    
+        <h2>Without Plugin</h2>
+    
+        <div>
+            <label for="how-many-1">How Many? </label>
+            <input type="text" id="how-many-1" class="wheelable" value="1" name="how-many-1" size="3" />
+        </div>
+        
+        <h2>With Plugin</h2>
+        
+        <div>
+            <label for="how-many-2">How Many? </label>
+            <input type="number" id="how-many-2" min="0" max="9" value="1" name="how-many-2" size="3" />
+        </div>
+        
+        <h2>Non-Numerical</h2>
+        
+        <div>
+            <label for="how-many-2">What kind of whale? </label>
+            <input type="text" id="whale" value="Blue" name="whale" size="3" />
+        </div>
+        
+    </div>
+        
+</body>
+    
+</html>
+

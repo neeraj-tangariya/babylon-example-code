@@ -21,7 +21,7 @@ var createScene = function () {
     if (cameraLimit < 3.6) {
         cameraLimit = 4;
     }
-    console.log(cameraLimit);
+    console.log('camera limit',cameraLimit, BABYLON.Tools.ToRadians(80));
     // camera.lowerRadiusLimit = cameraLimit;
     camera.radius = cameraLimit;
     camera.beta = BABYLON.Tools.ToRadians(80);
@@ -35,7 +35,6 @@ var createScene = function () {
 
     //Texture of each particle
     particleSystem.particleTexture = new BABYLON.Texture("textures/flare.png", scene);
-
     // Where the particles come from
     particleSystem.emitter = new BABYLON.Vector3(1, -0.5, 0.5); // the starting object, the emitter
     particleSystem.minEmitBox = new BABYLON.Vector3(-2, 0, 0); // Starting all from
@@ -84,13 +83,14 @@ var createScene = function () {
     messageText.color = 'white';
     messageText.fontFamily = 'Times New Roman';
     //underwater music
-    var music = new BABYLON.Sound("bgMusic", "assets/sounds/background.wav", scene, null, { loop: true, autoplay: true });
+    // var music = new BABYLON.Sound("bgMusic", "assets/sounds/background.wav", scene, null, { loop: true, autoplay: true });
 
     //Loading Of Meshes
     BABYLON.SceneLoader.ImportMesh("", "assets/", "Ocean.glb", scene, function (meshes) {
-        setTimeout(function () {
-            document.getElementsByTagName('section')[0].remove();
-        }, 3000);
+        // console.log('meshes is', meshes[0])
+        // setTimeout(function () {
+        //     document.getElementsByTagName('section')[0].remove();
+        // }, 3000);
     });
 
     setTimeout(() => {
